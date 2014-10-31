@@ -1,27 +1,42 @@
 package com.game.main;
 
-import com.game.src.Bread;
-import com.game.src.Chickens;
-import com.game.src.Dungeon1;
-import com.game.src.Dungeon2;
-import com.game.src.Dungeon3;
-import com.game.src.EndBossDragon;
-import com.game.src.Enemy;
-import com.game.src.GeneralStore;
-import com.game.src.HolyCitadel;
-import com.game.src.King;
-import com.game.src.KingdomCastle;
-import com.game.src.KingdomValley;
-import com.game.src.Lives;
-import com.game.src.Potions;
-import com.game.src.Soldier;
+import com.game.model.Player;
+import com.game.view.StartProgramView;
 
-public class Game {
-    String[] enemyID = { "Skeleton", "Zombie", "Warrior", "Assassin" }; //Enemy Names
+public class CuriousWorkmanship {
+
+    private static Game currentGame = null;
+    private static Player player = null;
+
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        CuriousWorkmanship.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        CuriousWorkmanship.player = player;
+    }
+    
     
     
     public static void main(String[] args) {
-         //Initiate King with kingNPC
+        Player playerOne = new Player();
+        
+        
+        
+        //create startprogramview and strt the prog
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.startProgram();
+        
+        /*
+        //Initiate King with kingNPC
         King kingNPC = new King();
         //Initiating kingNPC
         kingNPC.setNpcID(2);
@@ -175,7 +190,7 @@ public class Game {
         String livesInfo = lives.toString();
         System.out.println("\n\nProject Awesomness provides lives, so that our hero won't unnecessarily die. Lives in this project has four variables.\n It looks like this: " + livesInfo); 
         //==================================================
-        
+        */
         
         
         //String breadInfo = breadFood.toString();
@@ -186,6 +201,13 @@ public class Game {
         
     }
 
+    private static class Game {
+
+        public Game() {
+        }
+    }
+    
     
 
 }
+        
