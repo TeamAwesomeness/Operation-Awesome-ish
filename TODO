@@ -1,0 +1,40 @@
+=====================
+Inventory
+Algorithms for: XP, HP, ITEMS, HeroName, 
+
+The Inventory will be able to be seen in the General Store, Outside the General Store on the MAP and inside dungeons. 
+
+
+=====================
+Inventory
+
+Inventory will show: HeroName, ITEMS, XP, HP, and Crystal Spheres
+
+@------------------------@
+| Inventory
+@------------------------@
+| HeroName
+| [HP#/HP#]  /  [#XP]
+| Moldy Bread [#/#]
+| Slimy Chicken [#/#]
+| Potions of Health [#/#]
+| Extra Lives [#/#]
+@------------------------@
+| [MagicalSpheres#/MagicalSpheres#]
+@------------------------@
+
+EXAMPLE::
+
+@------------------------@
+| Inventory
+@------------------------@
+| Darth Vader
+| [97HP/100HP]  /  [11XP]
+| Moldy Bread [1/5]
+| Slimy Chicken [1/2]
+| Potions of Health [0/2]
+| Extra Lives [0/9]
+@------------------------@
+| Magical Spheres [0/1]
+@------------------------@
+
