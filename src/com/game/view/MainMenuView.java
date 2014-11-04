@@ -1,118 +1,149 @@
 package com.game.view;
 
+import java.util.Scanner;
+
 public class MainMenuView {
+    
+    Scanner user_input = new Scanner(System.in);
 
     private final String MENU = "\n"
             + "\n---------------------------------------"
             + "\n|       WELCOME TO THE MAIN MENU      |"
             + "\n---------------------------------------"
-            + "\nQ - New Game"
-            + "\nW - Load Game"
-            + "\nE - Options"
-            + "\nR - Help"
-            + "\nT - Credits"
-            + "\nY - Exit to Desktop"
+            + "\n1 - New Game                          |"
+            + "\n2 - Load Game                         |"
+            + "\n3 - Options                           |"
+            + "\n4 - Help                              |"
+            + "\n5 - Credits                           |"
+            + "\n0 - TEST: General Store               |"
+            + "\n6 - Exit to Desktop                   |"
             + "\n---------------------------------------";
     
     void displayMenu() {
-        char selection = ' ';
+        char option = ' ';
         do {
             System.out.println(MENU);           //display the main menu
             
-            String input = this.getInput();     //get the user's selection
-            selection = input.charAt(0);
+            String input = user_input.next();     //String input = this.getInput();  get the user's selection
+            option = input.charAt(0);
             
-            this.doAction(selection);           //do action based on selection
+            this.doAction(option);           //do action based on selection
             
-        } while (selection != 'Y');             //the selection is not "exit"
+        } while (option != '6');             //the selection is not "exit"
     }
 
 
-    private void doAction(char selection) {
+    private void doAction(char option) {
         
-        switch (selection) {
-            case 'Q': //create and start a new game
-                //this.startNewGame();
-                System.out.println("Starting new game...");
+        switch(option) {
+            
+            case '1': //create and start a new game
+                
+                option = 1;
+                startNewGame();
                 break;
-            case 'W': //load an existing game
-                //this.startExistingGame();
-                System.out.println("Loading existing game...");
+                
+            case '2': //load an existing game
+                
+                option = 2;
+                startExistingGame();
                 break;
-            case 'E': //display the options menu
-                //this.displayOptionsMenu();
-                System.out.println("Displaying Options menu...");
+                
+            case '3': //display the options menu
+                
+                option = 3;
+                displayOptionsMenu();
                 break;
-            case 'R': //display the help menu
-                //this.displayHelpMenu();
-                System.out.println("Displaying Help menu...");
+                
+            case '4': //display the help menu
+                
+                option = 4;
+                displayHelpMenu();
                 break;
-            case 'T': //display the credits
-                //this.displayCreditsMenu();
-                System.out.println("Displaying Credits menu...");
+                
+            case '5': //display the credits
+                
+                option = 5;
+                displayCreditsMenu();
                 break;
-            case 'Y': //exit the game
+            
+            case '0': //TEST: The General Store
+                
+                option = 0;
+                GeneralStore();
+                break;
+                
+            case '6': //exit the game
+                
+                option = 6;
+                exitGame();
                 return;
+                
             default:
+                
                 System.out.println("\n Invalid selection!");
                 break;
+                
         }
     }
 
     private void startNewGame() {
-        //Create a New Game
-        //GameControl.createNewGame(CuriousWorkmanship.getPlayer());
+
+        LoadNewGame newGame = new LoadNewGame();
+        newGame.displayMenu();
         
-        //Display the Game Menu
-        //GameMenuView gameMenu = new GameMenuView();
-        //gameMenu.displayMenu();
-        System.out.println("Starting new game...");
     }
 
     private void startExistingGame() {
-        //Load Existing Game
-        //GameControl.loadExistingGame(CuriousWorkmanship.getPlayer());
+
+        LoadExistingGame loadGame = new LoadExistingGame();
+        loadGame.displayMenu();
         
-        //Display the Game Menu
-        //GameMenuView gameMenu = new GameMenuView();
-        //gameMenu.displayMenu();
-        System.out.println("Loading existing game...");
     }
 
     private void displayOptionsMenu() {
-        //Load Options Menu
-        //GameControl.loadOptionsMenu(CuriousWorkmanship.getPlayer());
+
+        OptionsMenuView optionsMenu = new OptionsMenuView();
+        optionsMenu.displayMenu();
         
-        //Display Options Menu
-        //OptionsMenuView optionsMenu = new OptionsMenuView();
-        //optionsMenu.displayMenu();
-        System.out.println("Displaying Options menu...");
     }
 
     private void displayHelpMenu() {
-        //Load Help Menu
-        //GameControl.loadhelpMenu(CuriousWorkmanship.getPlayer());
-        
-        //Display Help Menu
-        //HelpMenuView helpMenu = new HelpMenuView();
-        //helpMenu.displayMenu();
-        System.out.println("Displaying Help menu...");
+
+        HelpMenuView helpMenu = new HelpMenuView();
+        helpMenu.displayMenu();
 
     }
 
     private void displayCreditsMenu() {
-        //Load Credits Menu
-        //GameControl.loadcreditsMenu(CuriousWorkmanship.getPlayer());
 
-        //Display Credits Menu
-        //CreditsMenuView creditsMenu = new CreditsMenuView();
-        //creditsMenu.displayMenu();
-        System.out.println("Displaying Credits menu...");
+        CreditsMenuView creditsMenu = new CreditsMenuView();
+        creditsMenu.displayMenu();
+        
+    }
+    
+    private void exitGame() {
+        System.out.println("Thanks for playing!");
+        System.exit(0);
     }
 
     private String getInput() {
-        System.out.println("**working as intended**");    
+        System.out.println("*** getInput working ***");    
         return null;
     }
+
+    private void GeneralStore() {
+        
+        GeneralStore genStore = new GeneralStore();
+        genStore.displayMenu();
+        
+    }
+
+    /*private void CastleClass() {
+        CastleClass castle = new CastleClass();
+        castle.displayMenu();
+    }*/
+
+    
     
 }

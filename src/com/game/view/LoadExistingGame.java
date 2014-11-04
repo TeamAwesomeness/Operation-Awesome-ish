@@ -2,18 +2,20 @@ package com.game.view;
 
 import java.util.Scanner;
 
-public class OptionsMenuView {
-
+public class LoadExistingGame {
+    
     Scanner user_input = new Scanner(System.in);
 
     private final String MENU = "\n"
             + "\n---------------------------------------"
-            + "\n|              Options                |"
+            + "\n|            Saved Games              |"
             + "\n---------------------------------------"
-            + "\n1 - Fullscreen                        |"
-            + "\n2 - Sound                             |"
-            + "\n3 - Color                             |"
-            + "\n4 - Back to Main Menu                 |"
+            + "\n1 - [Player Save Slot One]            |"
+            + "\n2 - [Player Save Slot Two]            |"
+            + "\n3 - [Player Save Slot Three]          |"
+            + "\n4 - [Player Save Slot Four]           |"
+            + "\n5 - [Player Save Slot Five]           |"
+            + "\n6 - Exit to Main Menu                 |"
             + "\n---------------------------------------";
     
     void displayMenu() {
@@ -26,7 +28,7 @@ public class OptionsMenuView {
             
             this.doAction(option);           //do action based on selection
             
-        } while (option != '4');             //THIS NUMBER MUST MATCH THE LAST NUMBER YOU CHOOSE
+        } while (option != '6');             //OPTION 6::GO BACK TO MAIN MENU
     }
 
 
@@ -34,28 +36,39 @@ public class OptionsMenuView {
         
         switch(option) {
          
-            case '1': //MENU OPTION [1]:: FULLSCREEN
+            case '1': //[SLOT ONE] LOAD SAVED GAME...
                 
                 option = 1;
-                System.out.println("The screen is now in a very tiny window!");
+                System.out.println("Loading Slot One... ... ...");
                 return;
                 
-            case '2': //MENU OPTION [2]:: SOUND
+            case '2': //[SLOT TWO] LOAD SAVED GAME...
                 
                 option = 2;
-                System.out.println("The sound is now off!");
+                System.out.println("Loading Slot Two... ... ...");
                 return;
-                
-            case '3': //MENU OPTION [3]:: COLOR
+            
+            case '3': //[SLOT THREE] LOAD SAVED GAME...
                 
                 option = 3;
-                System.out.println("You've turned off the color, "
-                                 + "\nnow it's all black and white!");
+                System.out.println("Loading Slot Three... ... ...");
                 return;
                 
-            case '4': //MENU OPTION [4]:: GO BACK TO MAIN MENU
+            case '4': //[SLOT FOUR] LOAD SAVED GAME...
                 
                 option = 4;
+                System.out.println("Loading Slot Four... ... ...");
+                return;
+                
+            case '5': //[SLOT FIVE] LOAD SAVED GAME...
+                
+                option = 5;
+                System.out.println("Loading Slot Five... ... ...");
+                return;
+                
+            case '6': //GO BACK TO MAIN MENU
+                
+                option = 6;
                 MainMenuView mainMenu = new MainMenuView();
                 mainMenu.displayMenu();
                 return;
@@ -67,7 +80,4 @@ public class OptionsMenuView {
                 
         }
     }
-
-    
-    
 }
