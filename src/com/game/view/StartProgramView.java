@@ -4,8 +4,6 @@ import com.game.control.ProgramControl;
 import com.game.model.Player;
 import static com.game.view.LoadNewGame.waitTime;
 import java.util.Scanner;
-import java.lang.Object;
-import java.awt.Color;
 
 public class StartProgramView {
 
