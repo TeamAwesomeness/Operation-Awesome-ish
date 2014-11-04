@@ -1,5 +1,17 @@
-individualAssignment_UML-Classes
+READ ME
 ================================
-Built by Sterling
+MOSES
 
-classes here built from UML and inserted in. Nothing special yet.
+HelpMenuView.java
+LoadNewGame.java
+
+
+STERLING
+
+CreditsMenuView.java
+GameMenuView.java
+GeneralStore.java
+LoadExistingGame.java
+MainMenuView.java
+OptionsMenuView.java
+StartProgramView.java
