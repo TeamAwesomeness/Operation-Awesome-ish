@@ -1,5 +1,6 @@
 package com.game.view;
 
+import com.game.control.InventoryControl;
 import java.util.Scanner;
 
 public class GeneralStore {
@@ -7,6 +8,8 @@ public class GeneralStore {
     Scanner user_input = new Scanner(System.in);
 
     private final String STORE = "\n"
+            + "\n======================================="
+            + "\n|  XP: 11                             |"
             + "\n======================================="
             + "\n|          The General Store          |"
             + "\n======================================="
@@ -17,7 +20,7 @@ public class GeneralStore {
             + "\n5 - Exit to Main Menu                 |"
             + "\n=======================================";
     
-    void displayMenu() {
+    void display() { //was displayMenu()
         char option = ' ';
         do {
             System.out.println(STORE);           //display the main menu
@@ -70,7 +73,7 @@ public class GeneralStore {
                 
                 option = 5;
                 MainMenuView mainMenu = new MainMenuView();
-                mainMenu.displayMenu();
+                mainMenu.display();//was displayMenu()
                 return;
                 
             default:

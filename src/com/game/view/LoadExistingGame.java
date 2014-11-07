@@ -18,7 +18,7 @@ public class LoadExistingGame {
             + "\n6 - Exit to Main Menu                 |"
             + "\n---------------------------------------";
     
-    void displayMenu() {
+    void display() {//was displayMenu()
         char option = ' ';
         do {
             System.out.println(MENU);           //display the main menu
@@ -70,7 +70,7 @@ public class LoadExistingGame {
                 
                 option = 6;
                 MainMenuView mainMenu = new MainMenuView();
-                mainMenu.displayMenu();
+                mainMenu.display();//was displayMenu()
                 return;
                 
             default:

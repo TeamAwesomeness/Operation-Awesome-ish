@@ -20,7 +20,7 @@ public class HelpMenuView {
             + "\n8 - Exit to Main Menu                 |"
             + "\n---------------------------------------";
     
-    void displayMenu() {
+    void display() {//was displayMenu()
         char option = ' ';
         do {
             System.out.println(MENU);           //display the main menu
@@ -158,7 +158,7 @@ public class HelpMenuView {
                 
                 option = 8;
                 MainMenuView mainMenu = new MainMenuView();
-                mainMenu.displayMenu();
+                mainMenu.display();//was displayMenu()
                 return;
                 
             default:

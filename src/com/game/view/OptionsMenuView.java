@@ -16,7 +16,7 @@ public class OptionsMenuView {
             + "\n4 - Back to Main Menu                 |"
             + "\n---------------------------------------";
     
-    void displayMenu() {
+    void display() {//was displayMenu()
         char option = ' ';
         do {
             System.out.println(MENU);           //display the main menu
@@ -57,7 +57,7 @@ public class OptionsMenuView {
                 
                 option = 4;
                 MainMenuView mainMenu = new MainMenuView();
-                mainMenu.displayMenu();
+                mainMenu.display(); //was displayMenu()
                 return;
                 
             default:

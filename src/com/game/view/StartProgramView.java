@@ -27,45 +27,46 @@ public class StartProgramView {
         
         //display the main menu
         MainMenuView mainMenu = new MainMenuView();
-        mainMenu.displayMenu();
+        mainMenu.display(); //was displayMenu();
     }
 
     private void displayBanner() {
                 
         System.out.println("The Kingdom");
-        waitTime(50000);
+        /*waitTime(50000);
         System.out.print("\n\nAccording to our oldest and most ancient scrolls"
                          + "\nthe mythical dragons descended from a distant nebula"
                          + "\nto the world and created order and life.");
         waitTime(130000);
-        System.out.print("\nThe dragon of power tore the great mountain red with"
+        System.out.print("\n\nThe dragon of power tore the great mountain red with"
                          + "\nfire and created land.");    
         waitTime(120000);        
-        System.out.print("\nThe dragon of wisdom brought wizardry and science and"
+        System.out.print("\n\nThe dragon of wisdom brought wizardry and science and"
                          + "\nbrought order to nature.");  
         waitTime(120000);        
-        System.out.print("\nAnd the dragon of courage, through justice and vigor,"
+        System.out.print("\n\nAnd the dragon of courage, through justice and vigor,"
                          + "\ncreated life - the animals that crawl the land and"
                          + "\nthe birds that soar the blue skies.");
         waitTime(140000);
-        System.out.print("\nAfter the dragons had finished their work, they left"
+        System.out.print("\n\nAfter the dragons had finished their work, they left"
                          + "\nthe world, but not without leaving behind three magical"
                          + "\nspheres of power, one for each aspect.");
         waitTime(150000);
-        System.out.print("\nThe Sphere of Power, the Sphere of Wisdom and the"
+        System.out.print("\n\nThe Sphere of Power, the Sphere of Wisdom and the"
                          + "\nSphere of Courage. A small but powerful portion of"
                          + "\nthe essence of the dragons was held in these mighty"
                          + "\nartifiacts.");
         waitTime(165000);
-        System.out.print("\nIn The Kingdom, there are many kingdom buildings which"
+        System.out.print("\n\nIn The Kingdom, there are many kingdom buildings which"
                          + "\nare mentioned repeatedly in the legends. These buildings"
                          + "\nwhich now lie in ruin, pale shadows of their former"
                          + "\nsplendor, are closely tied to the magical spheres.");
         waitTime(175000);
-        System.out.print("\nAmong these ruins lies one which has stood the test of time"
+        System.out.print("\n\nAmong these ruins lies one which has stood the test of time"
                          + "\nand it is here that the lost hero must bring the magical"
                          + "\nspheres to, and restore peace and prosperity to this land.");
         waitTime(180000);
+        
         System.out.print("\n\nLoading");
         waitTime(45000);
         System.out.print("...");
@@ -76,18 +77,27 @@ public class StartProgramView {
         waitTime(45000);
         System.out.print("...");
         waitTime(55000);
-        System.out.println("Loaded!");
+        System.out.print("...");
+        waitTime(65000);
+        System.out.print("...");
+        waitTime(45000);
+        System.out.print("...");
+        waitTime(45000);
+        System.out.print("...");
         waitTime(55000);
+        System.out.println("\nLoaded!");
+        waitTime(55000);
+        */
         System.out.println("\n\n\n\n");
         
-        System.out.print("*<<<<<<<<<<<<<<<<<|>>>>>>>>>>>>>>>>>*");
-        System.out.print("@            The Kingdom            @");
-        System.out.print("*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*");
-        System.out.print("@  The hero has been called to save @");
-        System.out.print("@  the kingdom. Go now and collect  @");
-        System.out.print("@  the magical orbs and defeat the  @");
-        System.out.print("@            evil dragon.           @");
-        System.out.print("*<<<<<<<<<<<<<<<<<|>>>>>>>>>>>>>>>>>*");
+        System.out.println("*<<<<<<<<<<<<<<<<<|>>>>>>>>>>>>>>>>>*");
+        System.out.println("@            The Kingdom            @");
+        System.out.println("*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*");
+        System.out.println("@  The hero has been called to save @");
+        System.out.println("@  the kingdom. Go now and collect  @");
+        System.out.println("@  the magical orbs and defeat the  @");
+        System.out.println("@            evil dragon.           @");
+        System.out.println("*<<<<<<<<<<<<<<<<<|>>>>>>>>>>>>>>>>>*");
 
      }
 
