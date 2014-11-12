@@ -5,7 +5,19 @@ import java.util.Scanner;
 public class OptionsMenuView {
 
     Scanner user_input = new Scanner(System.in);
-
+    
+    /*public OptionsMenuView() {
+        super("\n"
+            + "\n---------------------------------------"
+            + "\n|              Options                |"
+            + "\n---------------------------------------"
+            + "\n1 - Fullscreen                        |"
+            + "\n2 - Sound                             |"
+            + "\n3 - Color                             |"
+            + "\n4 - Back to Main Menu                 |"
+            + "\n---------------------------------------");
+    }*/
+    
     private final String MENU = "\n"
             + "\n---------------------------------------"
             + "\n|              Options                |"
@@ -16,17 +28,17 @@ public class OptionsMenuView {
             + "\n4 - Back to Main Menu                 |"
             + "\n---------------------------------------";
     
-    void display() {//was displayMenu()
+    void display() {
         char option = ' ';
         do {
-            System.out.println(MENU);           //display the main menu
+            System.out.println(MENU);  //display the main menu //was MENU
             
-            String input = user_input.next();   //String input = this.getInput();  get the user's selection
-            option = input.charAt(0);           
+            String input = user_input.next();     //String input = this.getInput(); <= Jacksons =>Mine: String input = user_input.next(); get the user's selection
+            option = input.charAt(0);
             
             this.doAction(option);           //do action based on selection
             
-        } while (option != '4');             //THIS NUMBER MUST MATCH THE LAST NUMBER YOU CHOOSE
+        } while (option != '4');             //the selection is not "exit"
     }
 
 
@@ -67,7 +79,5 @@ public class OptionsMenuView {
                 
         }
     }
-
-    
     
 }

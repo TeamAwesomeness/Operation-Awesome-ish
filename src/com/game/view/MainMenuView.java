@@ -1,25 +1,12 @@
 package com.game.view;
 
-public class MainMenuView extends View {
-    
-    //was: Scanner user_input = new Scanner(System.in);
+import java.util.Scanner;
+import static com.game.view.LoadNewGame.waitTime;
 
-    public MainMenuView() {
-        super("\n"
-              + "\n---------------------------------------"
-            + "\n  Welcome to the Menu "
-            + "\n---------------------------------------"
-            + "\n1 - New Game                          |"
-            + "\n2 - Load Game                         |"
-            + "\n3 - Options                           |"
-            + "\n4 - Help                              |"
-            + "\n5 - Credits                           |"
-            + "\n0 - TEST: General Store               |"
-            + "\n6 - Exit to Desktop                   |"
-            + "\n---------------------------------------");
-    }
+public class MainMenuView {
     
-    /*private final String MENU = "\n"
+    Scanner user_input = new Scanner(System.in);
+    private final String MENU = "\n"
             + "\n---------------------------------------"
             + "\n  Welcome to the Menu "
             + "\n---------------------------------------"
@@ -28,16 +15,30 @@ public class MainMenuView extends View {
             + "\n3 - Options                           |"
             + "\n4 - Help                              |"
             + "\n5 - Credits                           |"
-            + "\n0 - TEST: General Store               |"
             + "\n6 - Exit to Desktop                   |"
             + "\n---------------------------------------";
-   */ 
-    void displayMenu() {
+   
+    /*public MainMenuView() {
+        super("\n"
+            + "\n---------------------------------------"
+            + "\n  Welcome to the Menu "
+            + "\n---------------------------------------"
+            + "\n1 - New Game                          |"
+            + "\n2 - Load Game                         |"
+            + "\n3 - Options                           |"
+            + "\n4 - Help                              |"
+            + "\n5 - Credits                           |"
+            + "\n6 - Exit to Desktop                   |"
+            + "\n---------------------------------------");
+    }*/
+    
+    
+    void display() {
         char option = ' ';
         do {
-            System.out.println(promptMessage);  //display the main menu
+            System.out.println(MENU);  //display the main menu
             
-            String input = this.getInput();     //String input = this.getInput(); <= Jacksons =>Mine: String input = user_input.next(); get the user's selection
+            String input = user_input.next();     //String input = this.getInput(); <= Jacksons =>Mine: String input = user_input.next(); get the user's selection
             option = input.charAt(0);
             
             this.doAction(option);           //do action based on selection
@@ -74,14 +75,11 @@ public class MainMenuView extends View {
                 
                 displayCreditsMenu();
                 break;
-            
-            case '0': //TEST: The General Store
-                
-                GeneralStore();
-                break;
                 
             case '6': //exit the game
                 
+                System.out.println("Thanks for playing!");
+                waitTime(25000);
                 exitGame();
                 return;
                 
@@ -96,35 +94,35 @@ public class MainMenuView extends View {
     private void startNewGame() {
 
         LoadNewGame newGame = new LoadNewGame();
-        newGame.display(); //was displayMenu()
+        newGame.display();
         
     }
 
     private void startExistingGame() {
 
         LoadExistingGame loadGame = new LoadExistingGame();
-        loadGame.display();//was displayMenu()
+        loadGame.display();
         
     }
 
     private void displayOptionsMenu() {
 
         OptionsMenuView optionsMenu = new OptionsMenuView();
-        optionsMenu.display();//was displayMenu()
+        optionsMenu.display();
         
     }
 
     private void displayHelpMenu() {
 
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.display();//was displayMenu()
+        helpMenu.display();
 
     }
 
     private void displayCreditsMenu() {
 
         CreditsMenuView creditsMenu = new CreditsMenuView();
-        creditsMenu.display();//was displayMenu()
+        creditsMenu.display();
         
     }
     
@@ -136,15 +134,8 @@ public class MainMenuView extends View {
     private void GeneralStore() {
         
         GeneralStore genStore = new GeneralStore();
-        genStore.display();//was displayMenu()
+        genStore.display();
         
-    }
-    
-    //Override on MainMenuView Line 3
-
-    @Override
-    public void doAction(String value) {
-        System.out.println("***doAction working***");
     }
 
 }

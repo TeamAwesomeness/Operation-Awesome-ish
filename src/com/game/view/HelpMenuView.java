@@ -3,10 +3,26 @@ package com.game.view;
 import java.util.Scanner;
 
 public class HelpMenuView {
-
+    
     Scanner user_input = new Scanner(System.in);
 
-    private final String MENU = "\n"
+    /*public HelpMenuView() {
+        super("\n"
+            + "\n---------------------------------------"
+            + "\n  Welcome to the Menu "
+            + "\n---------------------------------------"
+            + "\n1 - New Game                          |"
+            + "\n2 - Load Game                         |"
+            + "\n3 - Options                           |"
+            + "\n4 - Help                              |"
+            + "\n5 - Credits                           |"
+            + "\n0 - TEST: General Store               |"
+            + "\n6 - Exit to Desktop                   |"
+            + "\n---------------------------------------");
+    }*/
+    
+    
+         private final String MENU = "\n"
             + "\n---------------------------------------"
             + "\n|            Help Menu                |"
             + "\n---------------------------------------"
@@ -20,17 +36,18 @@ public class HelpMenuView {
             + "\n8 - Exit to Main Menu                 |"
             + "\n---------------------------------------";
     
-    void display() {//was displayMenu()
+    void display() {
         char option = ' ';
         do {
-            System.out.println(MENU);           //display the main menu
-            
-            String input = user_input.next();   //String input = this.getInput();  get the user's selection
-            option = input.charAt(0);           
+            System.out.println(MENU);  //display the main menu
+            //String input = this.getInput(); <= Jacksons 
+            //String input = user_input.next(); <= Mine 
+            String input = user_input.next();     
+            option = input.charAt(0);
             
             this.doAction(option);           //do action based on selection
             
-        } while (option != '4');             //THIS NUMBER MUST MATCH THE LAST NUMBER YOU CHOOSE
+        } while (option != '8');             //Fill with last character (num/let)
     }
 
 
@@ -169,6 +186,4 @@ public class HelpMenuView {
         }
     }
 
-    
-    
 }

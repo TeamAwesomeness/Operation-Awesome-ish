@@ -1,6 +1,5 @@
 package com.game.view;
 
-import com.game.control.InventoryControl;
 import java.util.Scanner;
 
 public class GeneralStore {
@@ -17,20 +16,20 @@ public class GeneralStore {
             + "\n2 - Slimy Chicken             @7XP    |"
             + "\n3 - Potions of Health         @10XP   |"
             + "\n4 - Extra Life                @30XP   |"
-            + "\n5 - Exit to Main Menu                 |"
+            + "\nq - Exit to Map                       |"
             + "\n=======================================";
     
-    void display() { //was displayMenu()
+    void display() {
         char option = ' ';
         do {
-            System.out.println(STORE);           //display the main menu
+            System.out.println(STORE);
             
-            String input = user_input.next();   //String input = this.getInput();  get the user's selection
+            String input = user_input.next();
             option = input.charAt(0);           
             
-            this.doAction(option);           //do action based on selection
+            this.doAction(option);
             
-        } while (option != '5');             //THIS NUMBER MUST MATCH THE LAST NUMBER YOU CHOOSE
+        } while (option != 'q'); //THIS NUMBER MUST MATCH THE LAST NUMBER YOU CHOOSE
     }
     
     private void doAction(char option) {
@@ -39,7 +38,6 @@ public class GeneralStore {
             
             case '1': //create and start a new game
                 
-                option = 1;
                 System.out.println("\n\n");
                 System.out.println("You've purchased [1] Moldy Bread"
                                  + "\nfor 5XP.");
@@ -47,7 +45,6 @@ public class GeneralStore {
                 
             case '2': //load an existing game
                 
-                option = 2;
                 System.out.println("\n\n");
                 System.out.println("You've purchased [1] Slimy Chicken for"
                                   +"\n7XP.");
@@ -55,7 +52,6 @@ public class GeneralStore {
                 
             case '3': //display the options menu
                 
-                option = 3;
                 System.out.println("\n\n");
                 System.out.println("You've purchased [1] Potions of Health for"
                                   +"\n10XP.");
@@ -63,17 +59,15 @@ public class GeneralStore {
                 
             case '4': //display the help menu
                 
-                option = 4;
                 System.out.println("\n\n");
                 System.out.println("You've purchased [1] Extra Life"
                                  + "\nfor 30XP.");
                 break;
                 
-            case '5': //exit the game
+            case 'q': //exit to in-game Map View
                 
-                option = 5;
-                MainMenuView mainMenu = new MainMenuView();
-                mainMenu.display();//was displayMenu()
+                GameMapView mapView = new GameMapView();
+                mapView.display();
                 return;
                 
             default:

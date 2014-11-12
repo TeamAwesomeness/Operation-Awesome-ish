@@ -32,9 +32,9 @@ public class StartProgramView {
 
     private void displayBanner() {
                 
-        System.out.println("The Kingdom");
-        /*waitTime(50000);
-        System.out.print("\n\nAccording to our oldest and most ancient scrolls"
+        System.out.println("The Kingdom");        
+        waitTime(50000);
+        /*System.out.print("\n\nAccording to our oldest and most ancient scrolls"
                          + "\nthe mythical dragons descended from a distant nebula"
                          + "\nto the world and created order and life.");
         waitTime(130000);
@@ -85,7 +85,7 @@ public class StartProgramView {
         waitTime(45000);
         System.out.print("...");
         waitTime(55000);
-        System.out.println("\nLoaded!");
+        System.out.print("Loaded!");
         waitTime(55000);
         */
         System.out.println("\n\n\n\n");
@@ -235,8 +235,6 @@ public class StartProgramView {
                 System.out.println("Now loading... Apocolyptus ... Captain Rank ...");
                 waitTime(45000);
                 System.out.println("Now loading... Apocolyptus ... Captain Rank ... The White Queen ...");
-                waitTime(45000);
-                System.out.println("Now loading... Apocolyptus ... Captain Rank ... Murdering Sapphirah ...");
                 waitTime(45000);
                 System.out.println("Now loading... Apocolyptus ... Story Loaded. Hero: ...");
                 waitTime(95000);

@@ -11,24 +11,20 @@ public class LoadNewGame {
             + "\n|        Choose A Save Slot           |"
             + "\n---------------------------------------"
             + "\n1 - [Player Save Slot One]            |"
-            + "\n2 - [Player Save Slot Two]            |"
-            + "\n3 - [Player Save Slot Three]          |"
-            + "\n4 - [Player Save Slot Four]           |"
-            + "\n5 - [Player Save Slot Five]           |"
-            + "\n6 - Exit to Main Menu                 |"
+            + "\nq - Exit to Main Menu                 |"
             + "\n---------------------------------------";
     
-    void display() {//was displayMenu()
+    void display() {
         char option = ' ';
         do {
-            System.out.println(MENU);           //display the main menu
+            System.out.println(MENU);
             
-            String input = user_input.next();   //String input = this.getInput();  get the user's selection
+            String input = user_input.next();
             option = input.charAt(0);           
             
-            this.doAction(option);           //do action based on selection
+            this.doAction(option);
             
-        } while (option != '6');             //OPTION 6::GO BACK TO MAIN MENU
+        } while (option != 'q');//OPTION 6::GO BACK TO MAIN MENU
     }
 
 
@@ -38,8 +34,20 @@ public class LoadNewGame {
          
             case '1': //[SLOT ONE] LOAD SAVED GAME...
                 
-                option = 1;
-                System.out.println("Saving in Slot One... ... ...");
+                System.out.print("Saving in Slot One");
+                waitTime(10000);
+                System.out.print("\n\nLoading");
+                waitTime(25000);
+                System.out.print("...");
+                waitTime(25000);
+                System.out.print("...");
+                waitTime(25000);
+                System.out.print("...");
+                waitTime(25000);
+                System.out.print("...");
+                waitTime(25000);
+                System.out.print("Loaded!");
+                /*
                 waitTime(45000);
                 System.out.println("Loading Game...");
                 waitTime(55000);
@@ -63,11 +71,13 @@ public class LoadNewGame {
                 waitTime(75000);
                 System.out.println("Done!");
                 waitTime(45000);
+                */
+                GameMapView mapView = new GameMapView();
+                mapView.display();
                 return;
                 
-            case '2': //[SLOT TWO] LOAD SAVED GAME...
+            /*case '2': //[SLOT TWO] LOAD SAVED GAME...
                 
-                option = 2;
                 System.out.println("Loading Slot Two... ... ...");
                 waitTime(55000);
                 System.out.println("Loading Game...");
@@ -96,7 +106,6 @@ public class LoadNewGame {
             
             case '3': //[SLOT THREE] LOAD SAVED GAME...
                 
-                option = 3;
                 System.out.println("Loading Slot Three... ... ...");
                 waitTime(65000);
                 System.out.println("Loading Game...");
@@ -125,7 +134,6 @@ public class LoadNewGame {
                 
             case '4': //[SLOT FOUR] LOAD SAVED GAME...
                 
-                option = 4;
                 System.out.println("Loading Slot Four... ... ...");
                 waitTime(45000);
                 System.out.println("Loading Game...");
@@ -154,7 +162,6 @@ public class LoadNewGame {
                 
             case '5': //[SLOT FIVE] LOAD SAVED GAME...
                 
-                option = 5;
                 System.out.println("Loading Slot Five... ... ...");
                 waitTime(55000);
                 System.out.println("Loading Game...");
@@ -180,10 +187,9 @@ public class LoadNewGame {
                 System.out.println("Done!");
                 waitTime(45000);
                 return;
-                
+            */   
             case '6': //GO BACK TO MAIN MENU
                 
-                option = 6;
                 MainMenuView mainMenu = new MainMenuView();
                 mainMenu.display();//was displayMenu()
                 return;

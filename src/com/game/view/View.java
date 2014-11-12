@@ -5,7 +5,7 @@ import java.util.Scanner;
 public abstract class View implements ViewInterface {
     
     String promptMessage;
-    
+    Scanner keyboard = new Scanner(System.in);
     public View(String promptMessage) {
         this.promptMessage = promptMessage;
     }
@@ -20,10 +20,10 @@ public abstract class View implements ViewInterface {
             value = this.getInput(); //get the user's selection
             this.doAction(value); //do action based on selection
             
-        } while (!value.equals("Q"));
+        } while (!value.equals("6"));
     }
     
-    @Override
+    /*@Override
     public String getInput() {
         
         Scanner keyboard = new Scanner(System.in);
@@ -44,14 +44,14 @@ public abstract class View implements ViewInterface {
                 System.out.println("\n*** Invalid Selection *** Try again");
                 continue;
                 
-            }
-            
+}
+
             break;
-            
+
         }
         
         return selection; //return the name
-    }
+    }*/
 }
 
 
