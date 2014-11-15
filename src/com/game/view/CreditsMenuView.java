@@ -24,7 +24,7 @@ public class CreditsMenuView {
             + "\n| cans with his siblings or out in the|"
             + "\n| back alley with his .22.            |"
             + "\n---------------------------------------"
-            + "\n1 - Exit to Main Menu                 |"
+            + "\nq - Exit to Main Menu                 |"
             + "\n---------------------------------------";
     
     void display() {//was displayMenu()
@@ -37,7 +37,7 @@ public class CreditsMenuView {
             
             this.doAction(option);           //do action based on selection
             
-        } while (option != '2');             //the selection is not "exit"
+        } while (option != 'q');             //the selection is not "exit"
     }
 
 
@@ -45,9 +45,8 @@ public class CreditsMenuView {
         
         switch(option) {
          
-            case '1': //Go Back to Main Menu
+            case 'q': //Go Back to Main Menu
                 
-                option = 1;
                 MainMenuView mainMenu = new MainMenuView();
                 mainMenu.display();//was displayMenu()
                 return;

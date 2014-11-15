@@ -2,18 +2,18 @@ package com.game.src;
 
 import java.io.Serializable;
 import java.util.Objects;
-
-public class Bread implements Serializable {
-    public static Bread breadFood;
+    
+public class Experience implements Serializable {
+    public static Experience xp;
     
     //Class Instance Variables
     private String name;
     private double min;
     private double max;
     private int itemID;
-    private int healingAmt;
 
-    public Bread() {
+    public Experience() {
+        int xp = 338;
     }
 
     public String getName() {
@@ -48,27 +48,12 @@ public class Bread implements Serializable {
         this.itemID = itemID;
     }
 
-    public int getHealingAmt() {
-        return healingAmt;
-    }
-
-    public void setHealingAmt(int healingAmt) {
-        this.healingAmt = healingAmt;
-    }
-
-    @Override
-    public String toString() {
-        return "Bread{" + "name=" + name + ", min=" + min + ", max=" + max + ", itemID=" + itemID + ", healingAmt=" + healingAmt + '}';
-    }
-
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 41 * hash + Objects.hashCode(this.name);
-        hash = 41 * hash + (int) (Double.doubleToLongBits(this.min) ^ (Double.doubleToLongBits(this.min) >>> 32));
-        hash = 41 * hash + (int) (Double.doubleToLongBits(this.max) ^ (Double.doubleToLongBits(this.max) >>> 32));
-        hash = 41 * hash + this.itemID;
-        hash = 41 * hash + this.healingAmt;
+        int hash = 3;
+        hash = 31 * hash + Objects.hashCode(this.name);
+        hash = 31 * hash + (int) (Double.doubleToLongBits(this.min) ^ (Double.doubleToLongBits(this.min) >>> 32));
+        hash = 31 * hash + (int) (Double.doubleToLongBits(this.max) ^ (Double.doubleToLongBits(this.max) >>> 32));
         return hash;
     }
 
@@ -80,7 +65,7 @@ public class Bread implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Bread other = (Bread) obj;
+        final Experience other = (Experience) obj;
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
@@ -90,14 +75,14 @@ public class Bread implements Serializable {
         if (Double.doubleToLongBits(this.max) != Double.doubleToLongBits(other.max)) {
             return false;
         }
-        if (this.itemID != other.itemID) {
-            return false;
-        }
-        if (this.healingAmt != other.healingAmt) {
-            return false;
-        }
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "338";
+    }
+    
     
     
     

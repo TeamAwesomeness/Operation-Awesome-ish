@@ -1,7 +1,5 @@
 package com.game.view;
 
-import com.game.control.ProgramControl;
-import com.game.model.Player;
 import static com.game.view.LoadNewGame.waitTime;
 import java.util.Scanner;
 
@@ -32,9 +30,10 @@ public class StartProgramView {
 
     private void displayBanner() {
                 
-        System.out.println("The Kingdom");        
+        System.out.println("The Kingdom");   
+        /*
         waitTime(50000);
-        /*System.out.print("\n\nAccording to our oldest and most ancient scrolls"
+        System.out.print("\n\nAccording to our oldest and most ancient scrolls"
                          + "\nthe mythical dragons descended from a distant nebula"
                          + "\nto the world and created order and life.");
         waitTime(130000);

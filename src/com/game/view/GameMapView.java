@@ -1,8 +1,9 @@
 package com.game.view;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class GameMapView {
+public class GameMapView implements Serializable {
     
     Scanner user_input = new Scanner(System.in);
 
@@ -69,7 +70,7 @@ public class GameMapView {
                 
             case '6': //Inventory
                 
-                com.game.control.InventoryControl inventory = new com.game.control.InventoryControl();
+                com.game.view.InventoryControl inventory = new com.game.view.InventoryControl();
                 inventory.display();
                 return;
                 

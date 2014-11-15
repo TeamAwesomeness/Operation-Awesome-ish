@@ -7,16 +7,17 @@ public class MainMenuView {
     
     Scanner user_input = new Scanner(System.in);
     private final String MENU = "\n"
-            + "\n---------------------------------------"
-            + "\n  Welcome to the Menu "
-            + "\n---------------------------------------"
-            + "\n1 - New Game                          |"
-            + "\n2 - Load Game                         |"
-            + "\n3 - Options                           |"
-            + "\n4 - Help                              |"
-            + "\n5 - Credits                           |"
-            + "\n6 - Exit to Desktop                   |"
-            + "\n---------------------------------------";
+            + "\n\t---------------------------------------"
+            + "\n\t  Welcome to the Menu "
+            + "\n\t---------------------------------------"
+            + "\n\t1 - New Game                          |"
+            + "\n\t2 - Load Game                         |"
+            + "\n\t3 - Options                           |"
+            + "\n\t4 - Help                              |"
+            + "\n\t5 - Credits                           |"
+            + "\n\t                                      |"
+            + "\n\tq - Exit to Desktop                   |"
+            + "\n\t---------------------------------------";
    
     /*public MainMenuView() {
         super("\n"
@@ -28,7 +29,7 @@ public class MainMenuView {
             + "\n3 - Options                           |"
             + "\n4 - Help                              |"
             + "\n5 - Credits                           |"
-            + "\n6 - Exit to Desktop                   |"
+            + "\nq - Exit to Desktop                   |"
             + "\n---------------------------------------");
     }*/
     
@@ -43,7 +44,7 @@ public class MainMenuView {
             
             this.doAction(option);           //do action based on selection
             
-        } while (option != '6');             //the selection is not "exit"
+        } while (option != 'q');             //the selection is not "exit"
     }
 
 
@@ -76,7 +77,7 @@ public class MainMenuView {
                 displayCreditsMenu();
                 break;
                 
-            case '6': //exit the game
+            case 'q': //exit the game
                 
                 System.out.println("Thanks for playing!");
                 waitTime(25000);
@@ -127,15 +128,7 @@ public class MainMenuView {
     }
     
     private void exitGame() {
-        System.out.println("Thanks for playing!");
         System.exit(0);
-    }
-
-    private void GeneralStore() {
-        
-        GeneralStore genStore = new GeneralStore();
-        genStore.display();
-        
     }
 
 }

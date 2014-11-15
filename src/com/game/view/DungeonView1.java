@@ -1,9 +1,12 @@
 package com.game.view;
 
 class DungeonView1 {
-
+    // Icy Caves
     void display() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n\t=========================================");
+        System.out.println("\n\t=               Icy Caves               =");
+        CombatControlView startCombat = new CombatControlView();
+        startCombat.startCombat();
     }
     
 }

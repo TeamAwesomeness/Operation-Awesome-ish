@@ -1,9 +1,12 @@
 package com.game.view;
 
 class DungeonView2 {
-
+    // Fiery Depths
     void display() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n\t=========================================");
+        System.out.println("\n\t=             Fiery Depths              =");
+        CombatControlView startCombat = new CombatControlView();
+        startCombat.startCombat();
     }
     
 }

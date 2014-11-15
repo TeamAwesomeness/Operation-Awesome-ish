@@ -7,12 +7,13 @@ public class LoadExistingGame {
     Scanner user_input = new Scanner(System.in);
 
     private final String MENU = "\n"
-            + "\n---------------------------------------"
-            + "\n|            Saved Games              |"
-            + "\n---------------------------------------"
-            + "\n1 - [Player Save Slot One]            |"
-            + "\n6 - Exit to Main Menu                 |"
-            + "\n---------------------------------------";
+            + "\n\t---------------------------------------"
+            + "\n\t|            Saved Games              |"
+            + "\n\t---------------------------------------"
+            + "\n\t1 - [Player Save Slot One]            |"
+            + "\n\t                                      |"
+            + "\n\tq - Back to the Main Menu             |"
+            + "\n\t---------------------------------------";
     
     void display() {
         char option = ' ';
@@ -37,27 +38,6 @@ public class LoadExistingGame {
                 System.out.println("Loading Slot One... ... ...");
                 return;
                 
-            /*   
-            case '2': //[SLOT TWO] LOAD SAVED GAME...
-                
-                System.out.println("Loading Slot Two... ... ...");
-                return;
-            
-            case '3': //[SLOT THREE] LOAD SAVED GAME...
-                
-                System.out.println("Loading Slot Three... ... ...");
-                return;
-                
-            case '4': //[SLOT FOUR] LOAD SAVED GAME...
-                
-                System.out.println("Loading Slot Four... ... ...");
-                return;
-                
-            case '5': //[SLOT FIVE] LOAD SAVED GAME...
-                
-                System.out.println("Loading Slot Five... ... ...");
-                return;
-            */   
             case 'q': //GO BACK TO MAIN MENU
                 
                 MainMenuView mainMenu = new MainMenuView();

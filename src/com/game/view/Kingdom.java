@@ -17,6 +17,7 @@ public class Kingdom {
                 + "\n2 - Inquire the Guards                |"
                 + "\n3 - Nudge the King's throne           |"
                 + "\n4 - Ask about upgrades                |"
+                + "\n                                      |"
                 + "\nq - Exit to the Map                   |"
                 + "\n---------------------------------------";
 
