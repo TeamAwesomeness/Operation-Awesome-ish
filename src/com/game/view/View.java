@@ -21,7 +21,10 @@ public abstract class View implements ViewInterface {
             this.doAction(value); //do action based on selection
             
         } while (!value.equals("6"));
+    
     }
+    
+    
     
     /*@Override
     public String getInput() {

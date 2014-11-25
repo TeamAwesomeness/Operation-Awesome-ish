@@ -1,5 +1,7 @@
 package com.game.view;
 
+import com.game.main.CuriousWorkmanship;
+import java.awt.Point;
 import java.io.Serializable;
 
 public class Map implements Serializable {
@@ -74,6 +76,14 @@ public class Map implements Serializable {
             return false;
         }
         return true;
+    }
+
+    int getNoOfRows() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    int getNoOfColumns() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 } //End

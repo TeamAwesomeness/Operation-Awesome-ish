@@ -14,6 +14,7 @@ public class CombatControlView {
         String[] enemies = { "Skeleton", "Zombie", "Warrior", "Assassin" }; //Enemy Names
         int maxEnemyHealth = 75; //Max Enemy Health
         int enemyAttackDamage = 25; //Max Enemy Attack Damage
+        int magicalSpheres = 1; //Max Magical Spheres to drop from an enemy
         
         // Player Variables
         int health = 100;       //Health of Hero
