@@ -33,10 +33,4 @@ public class CuriousWorkmanship implements Serializable {
         com.game.main.CuriousWorkmanship.player = player;
     }
 
-    public static class Scene {
-
-        public Scene() {
-        }
-    }
-
 } //End

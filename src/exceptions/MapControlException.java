@@ -3,6 +3,7 @@ package exceptions;
 public class MapControlException extends Exception {
 
     public MapControlException() {
+        System.out.println("I'm sorry, you've typed the wrong character. Please type again.");
     }
 
     public MapControlException(String message) {

@@ -4,6 +4,7 @@ import static com.game.view.LoadNewGame.waitTime;
 import java.util.Scanner;
 
 public class StartProgramView {
+    public static StartProgramView startProgramView;
 
     public StartProgramView() {
         

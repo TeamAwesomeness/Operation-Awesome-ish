@@ -18,7 +18,7 @@ public class MainMenuView {
             + "\n\t                                      |"
             + "\n\tq - Exit to Desktop                   |"
             + "\n\t---------------------------------------";
-   
+
     /*public MainMenuView() {
         super("\n"
             + "\n---------------------------------------"
@@ -32,6 +32,7 @@ public class MainMenuView {
             + "\nq - Exit to Desktop                   |"
             + "\n---------------------------------------");
     }*/
+    private boolean promptMessage;
     
     
     void display() {
@@ -91,7 +92,7 @@ public class MainMenuView {
                 
         }
     }
-
+    
     private void startNewGame() {
 
         LoadNewGame newGame = new LoadNewGame();
@@ -131,4 +132,5 @@ public class MainMenuView {
         System.exit(0);
     }
 
+    
 }
