@@ -1,4 +1,4 @@
-package com.game.view;
+package com.game;
 
 import java.io.Serializable;
 import java.util.Objects;

@@ -1,4 +1,4 @@
-package com.game.view;
+package com.game;
 
 import java.util.Scanner;
 

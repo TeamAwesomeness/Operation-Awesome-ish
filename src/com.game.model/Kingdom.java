@@ -1,5 +1,6 @@
-package com.game.view;
+package com.game;
 
+import com.game.view.GameMapView;
 import java.util.Scanner;
 import static com.game.view.LoadNewGame.waitTime;
 
@@ -72,7 +73,7 @@ public class Kingdom {
 
                     if (magicalSphere == 3) {
                         System.out.println("You try to nudge the King's throne and it slides to reveal a secret hole!");
-                        com.game.view.secretThroneRoom throneRoom = new com.game.view.secretThroneRoom();
+                        com.game.secretThroneRoom throneRoom = new com.game.secretThroneRoom();
                         throneRoom.display();
                         waitTime(35000);
                     } else {

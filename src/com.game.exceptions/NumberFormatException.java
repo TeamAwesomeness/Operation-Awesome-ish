@@ -1,4 +1,4 @@
-package exceptions;
+package com.game.exceptions;
 
 public class NumberFormatException extends Exception {
 

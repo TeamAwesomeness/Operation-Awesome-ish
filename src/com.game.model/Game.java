@@ -1,4 +1,4 @@
-package com.game.view;
+package com.game;
 
 import java.util.Map;
 import java.io.Serializable;
@@ -109,7 +109,7 @@ public class Game implements Serializable{
         return true;
     }
 
-    void setMap(com.game.view.Map map) {
+    void setMap(com.game.Map map) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

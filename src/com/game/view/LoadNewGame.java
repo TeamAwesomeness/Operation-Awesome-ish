@@ -90,8 +90,11 @@ public class LoadNewGame {
                 System.out.println("\n Invalid selection!");
                 break;
                 
-        }
-    }
+                
+        }//End switch
+        
+    }//End doAction
+    
     public static void waitTime(long millisecond) {
         long max = millisecond;
         for(long i = 0; i < max; i++) {
@@ -99,4 +102,4 @@ public class LoadNewGame {
         }
     }
 
-}//End
+}//END

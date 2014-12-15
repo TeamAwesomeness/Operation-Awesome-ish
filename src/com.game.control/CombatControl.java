@@ -1,10 +1,11 @@
-package com.game.view;
+package com.game;
 
+import com.game.view.GameMapView;
 import java.util.Random;
 import java.util.Scanner;
 import static com.game.view.LoadNewGame.waitTime;
 
-public class CombatControlView {
+public class CombatControl {
     public void startCombat() {
         //System objects
         Scanner in = new Scanner(System.in);

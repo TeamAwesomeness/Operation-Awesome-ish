@@ -1,4 +1,4 @@
-package com.game.view;
+package com.game;
 
 import com.game.src.Bread;
 import com.game.src.Chickens;
@@ -7,6 +7,7 @@ import com.game.src.Level;
 import com.game.src.Potions;
 import com.game.src.Lives;
 import com.game.src.Spheres;
+import com.game.view.GameMapView;
 import java.util.Scanner;
 
 // Inventory Control

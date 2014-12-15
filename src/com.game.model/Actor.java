@@ -1,6 +1,7 @@
-package com.game.view;
+package com.game;
 
-import exceptions.MapControlException;
+import com.game.MapControl;
+import com.game.MapControlException;
 import java.awt.Point;
 import java.io.Serializable;
 import java.util.Objects;

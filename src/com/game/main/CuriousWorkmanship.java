@@ -1,7 +1,7 @@
 package com.game.main;
 
-import com.game.view.Game;
-import com.game.view.Player;
+import com.game.Game;
+import com.game.Player;
 import com.game.view.StartProgramView;
 import java.io.Serializable;
 

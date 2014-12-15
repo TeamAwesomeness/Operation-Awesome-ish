@@ -1,5 +1,10 @@
 package com.game.view;
 
+import com.game.DungeonView3;
+import com.game.Kingdom;
+import com.game.DungeonView2;
+import com.game.DungeonView1;
+import com.game.GeneralStore;
 import java.io.Serializable;
 import java.util.Scanner;
 
@@ -70,7 +75,7 @@ public class GameMapView implements Serializable {
                 
             case '6': //Inventory
                 
-                com.game.view.InventoryControl inventory = new com.game.view.InventoryControl();
+                com.game.InventoryControl inventory = new com.game.InventoryControl();
                 inventory.display();
                 return;
                 

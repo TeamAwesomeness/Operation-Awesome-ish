@@ -1,5 +1,7 @@
 package com.game.view;
 
+import com.game.Player;
+import com.game.ProgramControl;
 import static com.game.view.LoadNewGame.waitTime;
 import java.util.Scanner;
 

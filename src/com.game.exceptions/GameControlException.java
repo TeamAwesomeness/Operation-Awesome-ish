@@ -1,9 +1,9 @@
-package exceptions;
+package com.game.exceptions;
 
 public class GameControlException extends Exception {
     
     public GameControlException() {
-        System.out.println("I'm sorry, you've typed the wrong character. Please type again.");
+        System.out.println("Wrong character. Type a viable character.");
     }
 
     public GameControlException(String message) {

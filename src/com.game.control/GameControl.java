@@ -1,4 +1,4 @@
-package com.game.view;
+package com.game;
 
 import com.game.main.CuriousWorkmanship;
 import com.sun.org.apache.bcel.internal.Constants;
@@ -76,7 +76,7 @@ public class GameControl {
         System.out.println("Scene Location");
     }
 
-    static void assignScenesToLocations(Map map, com.game.view.Scene[] scenes) {
+    static void assignScenesToLocations(Map map, com.game.Scene[] scenes) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

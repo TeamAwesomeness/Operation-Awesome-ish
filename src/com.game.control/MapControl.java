@@ -1,9 +1,6 @@
-package com.game.view;
+package com.game;
 
 import com.game.main.CuriousWorkmanship;
-import com.game.view.Game;
-import com.game.view.Map;
-import exceptions.MapControlException;
 import java.awt.Point;
 
 class MapControl {

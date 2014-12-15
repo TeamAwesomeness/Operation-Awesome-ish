@@ -1,4 +1,4 @@
-package com.game.view;
+package com.game;
 
 import com.game.main.CuriousWorkmanship;
 
